@@ -13,6 +13,7 @@ import {
   MatInputModule,
   MatSelectModule
 } from '@angular/material';
+import { IssueListComponent } from './components/issue-list/issue-list.component';
 
 const materialModules = [
   MatSidenavModule,
@@ -29,8 +30,8 @@ const materialModules = [
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [IssueListComponent],
   imports: [CommonModule, ...materialModules],
-  exports: [...materialModules]
+  exports: [...materialModules, IssueListComponent]
 })
 export class SharedModule {}
