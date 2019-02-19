@@ -1,0 +1,13 @@
+{
+  "issues": [
+    {
+      "title": "I am not able to get that Angular app running",
+      "description": "Some description here"
+    },
+    {
+      "title": "Routing does not work",
+      "description": "My routing redirect does not work."
+    }
+  ],
+  "people": []
+}
