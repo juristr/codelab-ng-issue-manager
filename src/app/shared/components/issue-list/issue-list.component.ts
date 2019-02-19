@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IssuesService } from 'src/app/core/issues.service';
 
 @Component({
   selector: 'app-issue-list',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./issue-list.component.scss']
 })
 export class IssueListComponent implements OnInit {
-  constructor() {}
+  issues$ = this.issuesService.fetchIssues();
+
+  constructor(private issuesService: IssuesService) {}
 
   ngOnInit() {}
 }
