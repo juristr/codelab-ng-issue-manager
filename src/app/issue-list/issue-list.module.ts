@@ -2,12 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { IssueListRoutingModule } from './issue-list-routing.module';
+import { IssuesComponent } from './container/issues/issues.component';
+import { SharedModule } from '../shared';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    IssueListRoutingModule
-  ]
+  declarations: [IssuesComponent],
+  imports: [CommonModule, SharedModule, IssueListRoutingModule]
 })
-export class IssueListModule { }
+export class IssueListModule {}
