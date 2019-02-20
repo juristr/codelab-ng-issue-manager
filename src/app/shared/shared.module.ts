@@ -15,6 +15,7 @@ import {
 } from '@angular/material';
 import { IssueListComponent } from './components/issue-list/issue-list.component';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const materialModules = [
   MatSidenavModule,
@@ -29,7 +30,8 @@ const materialModules = [
   MatInputModule,
   MatSelectModule,
   // other modules
-  RouterModule
+  RouterModule,
+  ReactiveFormsModule
 ];
 
 @NgModule({
