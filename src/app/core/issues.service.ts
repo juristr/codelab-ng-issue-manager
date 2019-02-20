@@ -16,4 +16,12 @@ export class IssuesService {
   fetchIssueById(id: number) {
     return this.http.get<Issue>(`/api/issues/${id}`);
   }
+
+  saveIssue(issue: Issue): Observable<Issue> {
+    if (issue.id && issue.id > 0) {
+      return this.http.put<Issue>(`/api/issues/${issue.id}`, issue);
+    } else {
+      return this.http.post<Issue>(`/api/issues`, issue);
+    }
+  }
 }

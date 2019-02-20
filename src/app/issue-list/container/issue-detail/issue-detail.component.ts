@@ -12,6 +12,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./issue-detail.component.scss']
 })
 export class IssueDetailComponent implements OnInit {
+  private issue: Issue;
   form = new FormGroup({
     title: new FormControl(),
     description: new FormControl()
@@ -29,9 +30,23 @@ export class IssueDetailComponent implements OnInit {
         switchMap(issueId => this.issuesService.fetchIssueById(issueId))
       )
       .subscribe(issueDetail => {
+        this.issue = issueDetail;
         this.form.patchValue(issueDetail);
       });
   }
 
-  onSubmit({ valid, value }) {}
+  onSubmit({ valid, value }) {
+    if (valid) {
+      this.issuesService
+        .saveIssue({
+          ...this.issue,
+          ...value
+        })
+        .subscribe(x => {
+          alert('Successfully saved');
+        });
+    } else {
+      alert('form not valid');
+    }
+  }
 }
