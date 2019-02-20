@@ -12,4 +12,8 @@ export class IssuesService {
   fetchIssues(): Observable<Issue[]> {
     return this.http.get<Issue[]>('/api/issues');
   }
+
+  fetchIssueById(id: number) {
+    return this.http.get<Issue>(`/api/issues/${id}`);
+  }
 }
