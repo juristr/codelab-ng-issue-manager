@@ -3,6 +3,6 @@
     <mat-card-title>{{ issue.title }}</mat-card-title>
   </mat-card-header>
   <mat-card-actions>
-    <button mat-button>OPEN</button>
+    <button mat-button [routerLink]="[issue.id]">OPEN</button>
   </mat-card-actions>
 </mat-card>

@@ -14,6 +14,7 @@ import {
   MatSelectModule
 } from '@angular/material';
 import { IssueListComponent } from './components/issue-list/issue-list.component';
+import { RouterModule } from '@angular/router';
 
 const materialModules = [
   MatSidenavModule,
@@ -26,7 +27,9 @@ const materialModules = [
   MatDividerModule,
   MatFormFieldModule,
   MatInputModule,
-  MatSelectModule
+  MatSelectModule,
+  // other modules
+  RouterModule
 ];
 
 @NgModule({
