@@ -1,10 +1,12 @@
 {
   "issues": [
     {
+      "id": 1,
       "title": "I am not able to get that Angular app running",
       "description": "Some description here"
     },
     {
+      "id": 2,
       "title": "Routing does not work",
       "description": "My routing redirect does not work."
     }
